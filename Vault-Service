@@ -1,0 +1,31 @@
+spring.application.name=Vault-Service
+spring.application.name=Vault-Service
+
+server.port= 8087
+
+user-service.name=User-Service
+#user-service.url=http://localhost:8085/api/v1/sign/user
+user-service.url=http://localhost:8085/api/v1/sign/auth
+
+notification-service.name=Notification-Service
+notification-service.url=http://localhost:8083/api/v1/notification
+
+spring.datasource.url=jdbc:postgresql://localhost:5432/dw_vault
+spring.datasource.username=postgres
+spring.datasource.password=korede345
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.sql.init.mode=always
+
+#THINGS THAT I ADDED IN THE APPLICATION
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.show-sql=true
+
+vault.code.expiration.days=7
+
+#Zipkin
+management.tracing.sampling.probability=1.0
+
+# swagger-ui custom path
+springdoc.show-actuator=true
+
